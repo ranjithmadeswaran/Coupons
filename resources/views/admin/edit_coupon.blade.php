@@ -157,3 +157,5 @@
     </div>
 </div>
 @endsection
+
+@include('coupon::admin.includes')
