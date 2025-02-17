@@ -153,3 +153,5 @@
 </div>
 
 @endsection
+
+@include('coupon::provider.includes')
