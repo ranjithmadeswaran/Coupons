@@ -10,7 +10,7 @@
                 <nav>
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item">
-                            <a href="{{ route('admin.dashboard') }}">{{ __('Dashboard') }}</a>
+                            <a href="{{ route('admin.dashboard') }}">{{ __('Dashboardsdsd') }}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="javascript:void(0);">{{ __('application') }}</a>
