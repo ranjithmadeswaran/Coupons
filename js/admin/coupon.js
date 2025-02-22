@@ -424,6 +424,7 @@ if (pageValue === 'admin.create-coupon' || pageValue === 'admin.edit-coupon') {
     $("#quantity_value").on("input", function () {
         $(this).val($(this).val().replace(/[^0-9]/g, ""));
     });
+    console.log('testing');
 
 }
 
