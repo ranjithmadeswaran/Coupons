@@ -20,7 +20,8 @@
                 <div class="mb-2">
                     @if(isset($permission))
                         @if(hasPermission($permission, 'Coupon', 'create'))
-                        <a href="{{ route('provider.create-coupon') }}" class="btn btn-dark"><i class="ti ti-square-rounded-plus-filled me-2"></i>{{ __('add_coupon') }}</a>
+                        <div class="skeleton label-skeleton label-loader"></div>
+                        <a href="{{ route('provider.create-coupon') }}" class="btn btn-dark d-none real-label"><i class="ti ti-square-rounded-plus-filled me-2"></i>{{ __('add_coupon') }}</a>
                         @endif
                     @endif
                 </div>
@@ -75,7 +76,7 @@
                 <div class="custom-datatable-filter border-0">
                     <div class="table-responsive">
                         <input type="hidden" name="user_id" id="user_id" value="{{ Auth::id() }}">
-                        <table class="table" id="couponTable" data-empty="{{ __('coupon_empty_info') }}">
+                        <table class="table d-none" id="couponTable" data-empty="{{ __('coupon_empty_info') }}">
                             <thead class="thead-light">
                                 <tr>
                                     <th>{{ __('S.No') }}</th>
@@ -93,6 +94,178 @@
                             <tbody>
                             </tbody>
                         </table>
+
+                        <!-- loader Datatable Start-->
+                        <table id="loader-table" class="table table-striped table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>
+                                        <div class="skeleton label-skeleton label-loader"></div>
+                                        <p class="d-none real-label">ID</p>
+                                    </th>
+                                    <th>
+                                        <div class="skeleton label-skeleton label-loader"></div>
+                                        <p class="d-none real-label">Name</p>
+                                    </th>
+                                    <th>
+                                        <div class="skeleton label-skeleton label-loader"></div>
+                                        <p class="d-none real-label">Email</p>
+                                    </th>
+                                    <th>
+                                        <div class="skeleton label-skeleton label-loader"></div>
+                                        <p class="d-none real-label">Role</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">1</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">John Doe</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">johndoe@example.com</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Admin</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">2</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Jane Smith</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">janesmith@example.com</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Manager</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">3</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Robert Brown</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">robertbrown@example.com</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">User</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">3</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Robert Brown</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">robertbrown@example.com</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">User</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">3</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Robert Brown</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">robertbrown@example.com</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">User</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">3</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Robert Brown</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">robertbrown@example.com</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">User</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">3</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Robert Brown</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">robertbrown@example.com</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">User</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">4</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Emily Davis</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">emilydavis@example.com</p>
+                                    </td>
+                                    <td>
+                                        <div class="skeleton data-skeleton data-loader"></div>
+                                        <p class="d-none real-data">Customer</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- loader Datatable End -->
+
                     </div>
                 </div>
             </div>

@@ -23,7 +23,8 @@
                 <div class="mb-2">
                     @if(isset($permission))
                         @if(hasPermission($permission, 'Coupon', 'create'))
-                        <a href="{{ route('admin.create-coupon') }}" class="btn btn-primary"><i class="ti ti-square-rounded-plus-filled me-2"></i>{{ __('add_coupon') }}</a>
+                        <div class="skeleton label-skeleton label-loader"></div>
+                        <a href="{{ route('admin.create-coupon') }}" class="btn btn-primary d-none real-label"><i class="ti ti-square-rounded-plus-filled me-2"></i>{{ __('add_coupon') }}</a>
                         @endif
                     @endif
                 </div>
@@ -75,7 +76,115 @@
             </ul>
             <div class="card-body p-0 py-3">
                 <div class="custom-datatable-filter table-responsive">
-                    <table class="table" id="couponTable" data-empty="{{ __('coupon_empty_info') }}">
+                    <table id="loader-table" class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>
+                                    <div class="skeleton label-skeleton label-loader"></div>
+                                </th>
+                                <th>
+                                    <div class="skeleton label-skeleton label-loader"></div>
+                                </th>
+                                <th>
+                                    <div class="skeleton label-skeleton label-loader"></div>
+                                </th>
+                                <th>
+                                    <div class="skeleton label-skeleton label-loader"></div>
+                                </th>
+                                <th>
+                                    <div class="skeleton label-skeleton label-loader"></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton data-skeleton data-loader"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table d-none" id="couponTable" data-empty="{{ __('coupon_empty_info') }}">
                         <thead class="thead-light">
                             <tr>
                                 <th>#</th>

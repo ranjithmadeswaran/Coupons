@@ -255,6 +255,9 @@ if (pageValue === 'provider.coupon') {
         }
         $('#couponTable tbody').empty();
         var isValid = $(this).data('valid');
+        $('#loader-table').removeClass('d-none');
+        $(".label-loader, .input-loader").show();
+        $('#couponTable, .real-label, .real-input').addClass('d-none');
 
         listCoupons(isValid);
     });
@@ -331,6 +334,9 @@ if (pageValue === 'provider.coupon') {
                             language: datatableLang
                         });
                     }
+                    $('#loader-table').addClass('d-none');
+                    $(".label-loader, .input-loader").hide();
+                    $('#couponTable, .real-label, .real-input').removeClass('d-none');
                 }
             },
             error: function (error) {
